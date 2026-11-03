@@ -1,0 +1,20 @@
+# Datos (se descargan con el pipeline)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+
+# Secretos
+.env
