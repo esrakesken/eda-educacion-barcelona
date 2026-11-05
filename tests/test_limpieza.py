@@ -1,6 +1,11 @@
 import pandas as pd
 
-from src.limpieza import coordenadas_validas, corregir_coordenadas
+from src.limpieza import (
+    asignar_tipo_centro,
+    coordenadas_validas,
+    corregir_coordenadas,
+    limpiar_distrito,
+)
 
 
 def test_coordenadas_validas_detecta_puntos_fuera_de_barcelona():
@@ -32,3 +37,19 @@ def test_corregir_coordenadas_no_modifica_el_original():
     })
     corregir_coordenadas(df)
     assert df["latitud"].tolist() == [41.40, 40.42]
+
+
+def test_limpiar_distrito_quita_prefijo_y_corrige_mayusculas():
+    serie = pd.Series(["DM VIII - Nou Barris", "Ciutat vella", "Eixample", "DM X - Sant Martí"])
+    assert limpiar_distrito(serie).tolist() == ["Nou Barris", "Ciutat Vella", "Eixample", "Sant Martí"]
+
+
+def test_asignar_tipo_centro():
+    df = pd.DataFrame({
+        "naturaleza": ["Públic", "Privat", "Privat", "Privat"],
+        "concertada": [None, "SI", "NO", None],
+    })
+    resultado = asignar_tipo_centro(df)
+
+    assert resultado.tolist()[:3] == ["Pública", "Concertada", "Privada"]
+    assert pd.isna(resultado.iloc[3])
