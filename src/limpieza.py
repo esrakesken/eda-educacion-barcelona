@@ -144,3 +144,12 @@ def limpiar_matriculas(df: pd.DataFrame) -> pd.DataFrame:
     df["tipo_centro"] = asignar_tipo_centro(df)
 
     return df.drop(columns=["modalidad", "naturaleza", "concertada"])
+
+
+def renta_media_distrito(renta: pd.DataFrame) -> pd.DataFrame:
+    """Calcula la renta media de cada distrito y año a partir de las secciones censales."""
+    return (
+        renta.groupby(["Any", "Codi_Districte"], as_index=False)["Import_Euros"].mean()
+        .rename(columns={"Any": "anio_renta", "Codi_Districte": "codigo_distrito",
+                         "Import_Euros": "renta_media"})
+    )

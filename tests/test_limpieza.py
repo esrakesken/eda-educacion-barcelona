@@ -6,6 +6,7 @@ from src.limpieza import (
     corregir_coordenadas,
     limpiar_distrito,
     limpiar_matriculas,
+    renta_media_distrito,
 )
 
 
@@ -86,3 +87,17 @@ def test_limpiar_matriculas():
     assert limpio["codigo_distrito"].tolist() == [8, 1]
     assert limpio["alumnos_total"].dtype == "Int64"
     assert "modalidad" not in limpio.columns
+
+
+def test_renta_media_distrito():
+    renta = pd.DataFrame({
+        "Any": [2023, 2023, 2023, 2022],
+        "Codi_Districte": [1, 1, 2, 1],
+        "Import_Euros": [10000, 20000, 30000, 12000],
+    })
+    resultado = renta_media_distrito(renta)
+
+    assert resultado.columns.tolist() == ["anio_renta", "codigo_distrito", "renta_media"]
+    assert len(resultado) == 3
+    fila = resultado[(resultado["anio_renta"] == 2023) & (resultado["codigo_distrito"] == 1)]
+    assert fila["renta_media"].item() == 15000
