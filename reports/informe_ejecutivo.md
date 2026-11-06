@@ -5,7 +5,7 @@
 
 ---
 
-## En 30 segundos
+## Resumen ejecutivo
 
 1. **Uno de cada dos niños de Barcelona estudia en la escuela concertada** (50,8%). La pública escolariza al 43,8% y la privada sin concierto al 5,3%.
 2. **El distrito lo cambia todo, y va unido a la renta.** En Sarrià - Sant Gervasi solo 1 de cada 10 niños va a la pública; en Ciutat Vella, 7 de cada 10.
