@@ -4,7 +4,7 @@ Análisis exploratorio de datos (EDA) de la matrícula escolar en Barcelona: **�
 
 Alumnos de 3 a 16 años (Infantil P3-P5, Primaria y ESO) · cursos 2020/21 – 2024/25 · 10 distritos.
 
-🔗 **Dashboard interactivo:** *(enlace pendiente del despliegue)*
+🔗 **Dashboard interactivo:** [escuelas-barcelona.streamlit.app](https://escuelas-barcelona.streamlit.app/)
 
 ---
 
@@ -31,7 +31,7 @@ Las respuestas completas a las 6 preguntas están en el **Paso 8: Conclusiones**
 | Notebook del análisis (en español, explicado paso a paso) | [`notebooks/01_eda_educacion_bcn.ipynb`](notebooks/01_eda_educacion_bcn.ipynb) |
 | Informe ejecutivo (para dirección) | [`reports/informe_ejecutivo.md`](reports/informe_ejecutivo.md) · [PDF](reports/informe_ejecutivo.pdf) |
 | Informe de calidad de datos | [`reports/calidad_datos.md`](reports/calidad_datos.md) |
-| Dashboard interactivo (Streamlit) | [`app.py`](app.py) |
+| Dashboard interactivo (Streamlit) | [escuelas-barcelona.streamlit.app](https://escuelas-barcelona.streamlit.app/) · código en [`app.py`](app.py) |
 | Pipeline reproducible | [`pipeline.py`](pipeline.py) + [`src/`](src/) |
 | Tests unitarios | [`tests/`](tests/) |
 
