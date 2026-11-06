@@ -1,6 +1,8 @@
 # Datos (se descargan con el pipeline)
 data/raw/*
 data/processed/*
+!data/processed/matriculas_bcn_limpio.csv
+!data/processed/renta_distrito.csv
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
