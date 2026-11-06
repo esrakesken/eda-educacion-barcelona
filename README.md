@@ -52,6 +52,7 @@ eda-educacion-barcelona/
 │   └── 01_eda_educacion_bcn.ipynb
 ├── reports/
 │   ├── informe_ejecutivo.md
+│   ├── informe_ejecutivo.pdf
 │   ├── calidad_datos.md
 │   ├── generar_figuras.py      # Genera los gráficos del informe ejecutivo
 │   └── figuras/
