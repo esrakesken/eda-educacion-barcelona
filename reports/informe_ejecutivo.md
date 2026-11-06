@@ -61,4 +61,4 @@ La concertada escolariza al 46% de los alumnos en Infantil, al 48% en Primaria y
 
 ---
 
-**Más detalle:** análisis completo en el [notebook](../notebooks/01_eda_educacion_bcn.ipynb), calidad de los datos en [calidad_datos.md](calidad_datos.md) y exploración interactiva en el [dashboard](https://escuelas-barcelona.streamlit.app/).
+**Más detalle:** análisis completo en el [notebook](../notebooks/01_eda_educacion_bcn.ipynb), calidad de los datos en [calidad_datos.md](calidad_datos.md) y exploración interactiva en el dashboard: [https://escuelas-barcelona.streamlit.app/](https://escuelas-barcelona.streamlit.app/)
